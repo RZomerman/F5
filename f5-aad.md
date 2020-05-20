@@ -54,7 +54,7 @@ In some configurations it is desired to have some on-premises AD attributes avai
 - for the source attribute, select **user.dnsdomainname**
 - Click **Save**
 
-![f5apm-aad-additional-claims](./images/f5-aad-create-enterprise-application-additional-claims.PNG)
+![f5apm-aad-additional-claims](./images/f5-aad-create-enterprise-application-additional-claims.png)
 
 ## Next steps
 
