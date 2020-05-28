@@ -54,11 +54,14 @@ In some configurations it is desired to have some on-premises AD attributes avai
 - for the source attribute, select **user.dnsdomainname**
 - Click **Save**
 
-![f5apm-aad-additional-claims](./images/f5-aad-create-enterprise-application-additional-claims.png)
+![f5apm-aad-additional-claims](./images/f5-aad-create-enterprise-application-additional-claims.PNG)
 
 ## Next steps
 
 This concludes the configuration of the Azure AD configuration which is required for almost all F5 scenario's such as Kerberos, Header based and advanced Header injection scenarios.
+
+optionally - the import of an SSL certificate to be used for publishing the application
+- [F5 - Import a PFX and configure the client SSL profile](f5-client-ssl.md)
 
 F5 supports multiple ways for integrating with Azure AD. The easiest is the Guided Configuration, but it is also possible to manually configure the SP and IdP to be used for other scenario's:
 

@@ -64,13 +64,6 @@ Next, we need to grant the F5 account to request kerberos tickets on behalf of t
 
 This concludes the AD configuration.
 
-## F5 Configuration - SSL Certificates
-
-Because we are publishing an SSL based website, we need to load an SSL certificate into the F5 system. This certificate will be used to host our website and should match the URL used (`<portal.contoso.com / *.contoso.com>`).
-
-1. Go to, **System >> Certificate Management >> Traffic Certificate Management : SSL Certificate List : Import**
-
-2. If you have a pfx file, set the Import Type to PKCS 12 (IIS), give the imported certificate a name, choose the pfx file and provide the `<PFX password>` prior to clicking **Import**
 
 ## Next steps
 
