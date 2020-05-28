@@ -27,7 +27,7 @@ To get started, you need the following items:
     [Manual Configuration of AAD as SAML provider](f5-aad-saml-manual.md)
 
 - A configured Radius Server in F5 according to:
-    [F5 - Azure AD Integration - Radius based MFA](f5-radius-nps.md)
+    [F5 - Azure AD Integration - Radius based MFA](f5-radius-nps.md) [note]_only create the Radius configuration but do not apply to the access policy_
 
 ### Architecture
 
