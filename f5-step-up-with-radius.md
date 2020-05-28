@@ -39,7 +39,11 @@ The following architecture will be used:
 
 In order to implement this, we need to have a Per-Session policy as well as a Per-Request policy.
 
-The per-session policy will authenticate the user based on SAML (Azure AD) and grant access to the base of the website. The Per-Request policy will be implemented to monitor the URLs used and request the user to perform Radius Authentication if */auth/* is being accessed. Obviously the URL can be more strict.
+The per-session policy will authenticate the user based on SAML (Azure AD) and grant access to the base of the website. 
+
+![f5-step-up-architecture](./images/f5-step-up-access-policy.png)
+
+The Per-Request policy will be implemented to monitor the URLs used and request the user to perform Radius Authentication if */auth/* is being accessed. Obviously the URL can be more strict.
 To create the Per-Request policy:
 
 1. Go to **Access >> Profiles / Policies : Per Request Policies** and click **create..**
