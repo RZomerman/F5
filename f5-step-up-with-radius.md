@@ -24,7 +24,10 @@ To get started, you need the following items:
 - an application in Azure AD according to: [F5 - Creating an Enterprise Application in Azure AD](f5-aad.md)
 
 - A configured Access Profile in F5 according to:
-    [Manual Configuration of AAD as SAML provider](f5--aad-saml-manual.md)
+    [Manual Configuration of AAD as SAML provider](f5-aad-saml-manual.md)
+
+- A configured Radius Server in F5 according to:
+    [F5 - Azure AD Integration - Radius based MFA](f5-radius-nps.md)
 
 ### Architecture
 
