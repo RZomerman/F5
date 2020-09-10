@@ -1,0 +1,66 @@
+
+#BASE: 1.2.840.113556.1.8000.2554.51771.46060.1203.17850.41028.5716851.14864759
+#Roles; 1.2.840.113556.1.8000.2554.51771.46060.1203.17850.41028.5716851.14864759.1
+#RoleDescription: 1.2.840.113556.1.8000.2554.51771.46060.1203.17850.41028.5716851.14864759.2
+#PartnerID: 1.2.840.113556.1.8000.2554.51771.46060.1203.17850.41028.5716851.14864759.3
+
+
+# Attribute: Roles
+dn: CN=PartnerID,CN=Schema,CN=Configuration,CN=X
+changetype: ntdsschemaadd
+objectClass: attributeSchema
+#
+attributeId: 1.2.840.113556.1.8000.2554.51771.46060.1203.17850.41028.5716851.14864759.3
+attributeSyntax: 2.5.5.12
+isSingleValued: TRUE
+rangeLower: 1
+rangeUpper: 127
+adminDisplayName: PartnerID
+adminDescription: PartnerID
+oMSyntax: 64
+searchFlags: 1
+lDAPDisplayName: PartnerID
+systemOnly: FALSE
+
+# Attribute: Roles
+dn: cn=RoleDescription,CN=Schema,CN=Configuration,CN=X
+changetype: ntdsschemaadd
+objectClass: attributeSchema
+#
+attributeId: 1.2.840.113556.1.8000.2554.51771.46060.1203.17850.41028.5716851.14864759.2
+attributeSyntax: 2.5.5.12
+isSingleValued: TRUE
+rangeLower: 1
+rangeUpper: 127
+adminDisplayName: RoleDescription
+adminDescription: RoleDescription
+oMSyntax: 64
+searchFlags: 1
+lDAPDisplayName: RoleDescription
+systemOnly: FALSE
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
+
+# Now you need to update the userobject class
+# to include your custom attribute.
+dn: CN=User,CN=Schema,CN=Configuration,CN=X
+changetype: ntdsschemamodify
+add: mayContain
+mayContain: PartnerID
+-
+
+dn: CN=User,CN=Schema,CN=Configuration,CN=X
+changetype: ntdsschemamodify
+add: mayContain
+mayContain: RoleDescription
+-
+
+dn:
+changetype: modify
+add: schemaUpdateNow
+schemaUpdateNow: 1
+-
